@@ -14,7 +14,23 @@ package com.monday8am.photobooth
 		
 		public function CanonEOSLib()
 		{
-			_ExtensionContext = ExtensionContext.createExtensionContext( "com.monday8am.photobooth" , null );
+			try 
+			{
+				_ExtensionContext = ExtensionContext.createExtensionContext( "com.monday8am.photobooth" , null );
+			}
+			catch( e : ArgumentError ) 
+			{
+				trace( e);
+				
+				var _e : ArgumentError = new ArgumentError();
+				_e.errorID = e.errorID;
+				_e.message = e.message;
+				_e.name = e.name;
+				dispatchEvent( _e);
+			}	
+			
+			
+			
 		}
 		
 		public function getCamera():Camera
