@@ -1,5 +1,6 @@
 package com.monday8am.photobooth
 {
+	import flash.events.ErrorEvent;
 	import flash.events.Event;
 	import flash.events.EventDispatcher;
 	import flash.events.IEventDispatcher;
@@ -11,6 +12,7 @@ package com.monday8am.photobooth
 	{
 		private var _ExtensionContext : ExtensionContext;
 		private var _camera : Camera; 
+		private var _extensionContextReady : Boolean = false;
 		
 		public function CanonEOSLib()
 		{
@@ -18,20 +20,27 @@ package com.monday8am.photobooth
 			{
 				_ExtensionContext = ExtensionContext.createExtensionContext( "com.monday8am.photobooth" , null );
 			}
-			catch( e : ArgumentError ) 
+			catch( e : Error ) 
 			{
 				trace( e);
-				
-				var _e : ArgumentError = new ArgumentError();
-				_e.errorID = e.errorID;
-				_e.message = e.message;
-				_e.name = e.name;
-				dispatchEvent( _e);
 			}	
-			
-			
-			
 		}
+		
+		
+		public function get extensionContextReady():Boolean
+		{
+			if( _ExtensionContext == null )
+			{
+				_extensionContextReady = false;
+			}
+			else
+			{
+				_extensionContextReady = true;
+			}
+			
+			return _extensionContextReady;
+		}
+
 		
 		public function getCamera():Camera
 		{
