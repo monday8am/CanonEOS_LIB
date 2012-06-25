@@ -2,6 +2,7 @@
 <flexLibProperties includeAllClasses="true" useMultiPlatformConfig="false" version="3">
   <includeClasses>
     <classEntry path="com.monday8am.photobooth.EDSDKTypes"/>
+    <classEntry path="com.monday8am.photobooth.Utils"/>
   </includeClasses>
   <includeResources/>
   <namespaceManifests/>
