@@ -1,0 +1,1 @@
+adt -package -target ane CanonEOSLib.ane descriptor.xml -swc CanonEOS_LIB.swc -platform Windows-x86 library.swf CanonEOSAne.dll

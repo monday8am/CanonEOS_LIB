@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <extension xmlns="http://ns.adobe.com/air/extension/2.5">
-	<id>com.monday8am.FRECanonEOSLib</id>
+	<id>com.monday8am.CanonEOSLib</id>
 	<versionNumber>1.0.0</versionNumber>
 	<platforms>
 		<platform name="Windows-x86">
 			<applicationDeployment>
-				<nativeLibrary>FRECanonCamera.dll</nativeLibrary>
+				<nativeLibrary>CanonEOS_ANE.dll</nativeLibrary>
 				<initializer>initializer</initializer>
 				<finalizer>finalizer</finalizer>
 			</applicationDeployment>
