@@ -1,4 +1,4 @@
-package com.monday8am.photobooth
+package com.monday8am.ane
 {
 	
 	public class EDSDKTypes 
@@ -141,6 +141,8 @@ package com.monday8am.photobooth
 		public const kEdsPropID_Evf_WhiteBalance        : uint = 0x00000502;
 		public const kEdsPropID_Evf_ColorTemperature    : uint = 0x00000503;
 		public const kEdsPropID_Evf_DepthOfFieldPreview : uint = 0x00000504;
+		public const kEdsPropID_Evf_Width			    : uint = 0x00000506;
+		public const kEdsPropID_Evf_Height			    : uint = 0x00000507;
 		
 		// EVF IMAGE DATA Properties
 		public const kEdsPropID_Evf_Zoom                : uint = 0x00000507;

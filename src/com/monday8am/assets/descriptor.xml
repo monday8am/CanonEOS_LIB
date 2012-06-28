@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <extension xmlns="http://ns.adobe.com/air/extension/2.5">
-	<id>com.monday8am.CanonEOSLib</id>
+	<id>com.monday8am.ane.CanonEOSLib</id>
 	<versionNumber>1.0.0</versionNumber>
 	<platforms>
 		<platform name="Windows-x86">
 			<applicationDeployment>
-				<nativeLibrary>CanonEOS_ANE.dll</nativeLibrary>
+				<nativeLibrary>CanonEOSAne.dll</nativeLibrary>
 				<initializer>initializer</initializer>
 				<finalizer>finalizer</finalizer>
 			</applicationDeployment>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <flexLibProperties includeAllClasses="true" useMultiPlatformConfig="false" version="3">
   <includeClasses>
-    <classEntry path="com.monday8am.photobooth.EDSDKTypes"/>
-    <classEntry path="com.monday8am.photobooth.Utils"/>
+    <classEntry path="com.monday8am.ane.EDSDKTypes"/>
+    <classEntry path="com.monday8am.ane.Utils"/>
   </includeClasses>
   <includeResources/>
   <namespaceManifests/>

@@ -1,4 +1,4 @@
-package com.monday8am.photobooth
+package com.monday8am.ane
 {
 
 	import flash.display.Bitmap;
@@ -16,22 +16,15 @@ package com.monday8am.photobooth
 	public class Camera extends EventDispatcher
 	{
 		
-		
 		private var _extension : ExtensionContext;
-		
-		// camera properties
-		private var _modelName : String;
-		
-		// utils
 		
 		
 		public function Camera( extension : ExtensionContext )
 		{
 			_extension = extension;
 			_extension.addEventListener(  StatusEvent.STATUS, onStatus );
-			initCamera();
 			
-			// get properties and get camera data
+			initCamera();
 		}
 		
 
@@ -41,7 +34,7 @@ package com.monday8am.photobooth
 		 * 
 		 */  
 
-		public function get modelName() : String { return _modelName; }
+		public function get modelName() : String { return ""; }
 	
 		
 		
@@ -110,6 +103,9 @@ package com.monday8am.photobooth
 		
 		public function evfAFOff(): Boolean { return executeCommand( "evfAFOff" );  }
 		
+		public function getEVFWidth()  : int { return int( _extension.call( "getEVFWidth") ); } 
+		
+		public function getEVFHeight() : int { return int( _extension.call( "getEVFHeight") );} 
 		
 		/**
 		 * 
@@ -139,7 +135,8 @@ package com.monday8am.photobooth
 			var string:String = number_str.toUpperCase();
 			
 			// While the minimumLength argument is higher than the length of the string, add a leading zero.
-			while (minimumLength > string.length) {
+			while (minimumLength > string.length) 
+			{
 				string = "0" + string;
 			}
 			
