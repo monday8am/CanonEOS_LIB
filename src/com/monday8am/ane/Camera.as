@@ -45,20 +45,7 @@ package com.monday8am.ane
 		 **/  
 		
 		private function initCamera() : Boolean { return _extension.call( "initCamera" ); }
-		
-		private function executeCommand( command : String, ...rest ) : Boolean  
-		{
-			return _extension.call( "executeCommand", command, rest );
-		}
-
-		
-		/**
-		 *
-		 *  General methods
-		 * 
-		 */ 
-		
-		public function release(): Boolean { return _extension.call( "releaseCamera" ); }
+		public  function release()	  : Boolean { return _extension.call( "releaseCamera" ); }
 		
 		
 		/**
@@ -67,16 +54,10 @@ package com.monday8am.ane
 		 * 
 		 **/
 		
-		public function takePicture( path : String ): Boolean 
-		{ 
-			return _extension.call( "executeCommand", "TakePicture", path )
-		}
-
-		public function pressingHalfway(): Boolean { return executeCommand( "pressingHalfway" ); }
-		
-		public function pressingCompletely(): Boolean { return executeCommand( "pressingCompletely" ); }
-		
-		public function pressingOff(): Boolean { return executeCommand( "pressingOff" ); }
+		public function takePicture( path : String ): Boolean { return _extension.call( "executeCommand", "TakePicture", path ) }
+		public function pressingHalfway()			: Boolean { return _extension.call( "executeCommand", "pressingHalfway" ); }
+		public function pressingCompletely()		: Boolean { return _extension.call( "executeCommand", "pressingCompletely" ); }
+		public function pressingOff()				: Boolean { return _extension.call( "executeCommand", "pressingOff" ); }
 
 
 		/**
@@ -90,22 +71,18 @@ package com.monday8am.ane
 			var timer : Timer = new Timer( 4000, 1 );
 			timer.addEventListener( TimerEvent.TIMER_COMPLETE, onTimerComplete );
 			timer.start();
-			function onTimerComplete( e : Event ) : void { executeCommand( "downloadEVF" );  }
+			function onTimerComplete( e : Event ) : void {  _extension.call( "executeCommand", "downloadEVF" );  }
 			
-			return executeCommand( "startEVF" );  
+			return  _extension.call( "executeCommand", "startEVF" );  
 		}
 		
-		public function getEVF( _bitmapData : BitmapData ):Boolean  { return _extension.call( "getEVF", _bitmapData ); }	
+		public function getEVF( _bitmapData : BitmapData ) : Boolean { return _extension.call( "getEVF", _bitmapData ); }	
+		public function endEVF()						   : Boolean { return _extension.call( "executeCommand", "endEVF" );  }
+		public function evfAFOn()						   : Boolean { return _extension.call( "executeCommand", "evfAFOn" );  }
+		public function evfAFOff()						   : Boolean { return _extension.call( "executeCommand", "evfAFOff" );  }
+		public function getEvfWidth()  				 : uint 	{ return int( _extension.call( "getCameraProperty", EDSDKTypes.kEdsPropID_Evf_Width ) ); } 
+		public function getEvfHeight() 				 : uint     { return int( _extension.call( "getCameraProperty", EDSDKTypes.kEdsPropID_Evf_Height ) ); }
 		
-		public function endEVF(): Boolean { return executeCommand( "endEVF" );  }
-		
-		public function evfAFOn(): Boolean { return executeCommand( "evfAFOn" );  }
-		
-		public function evfAFOff(): Boolean { return executeCommand( "evfAFOff" );  }
-		
-		public function getEVFWidth()  : int { return int( _extension.call( "getEVFWidth") ); } 
-		
-		public function getEVFHeight() : int { return int( _extension.call( "getEVFHeight") );} 
 		
 		/**
 		 * 
