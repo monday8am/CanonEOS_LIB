@@ -3,30 +3,30 @@ package com.monday8am.ane
 	public class EDSDKValues
 	{
 		
-		public static const ExposureCompensation	: Array = [ { label: "+3" 	   , data: 0x18 },
+		public static const ExposureCompensation	: Array = [ { label: "+3" 	  , data: 0x18 },
 																{ label: "+2 2/3" , data: 0x15 },
 																{ label: "+2 1/2" , data: 0x14 },
 																{ label: "+2 1/3" , data: 0x13 },
-																{ label: "+2" 	   , data: 0x10 },
+																{ label: "+2" 	  , data: 0x10 },
 																{ label: "+1 2/3" , data: 0x0d },
 																{ label: "+1 1/2" , data: 0x0c },
 																{ label: "+1 1/3" , data: 0x0b },
-																{ label: "+1" 	   , data: 0x08 },
+																{ label: "+1" 	  , data: 0x08 },
 																{ label: "+2/3"   , data: 0x05 },
 																{ label: "+1/2"   , data: 0x04 },
 																{ label: "+1/3"   , data: 0x03 },
 																{ label: "0"      , data: 0x00 },
 																{ label: "-1/3"   , data: 0xfd },
 																{ label: "-1/2"   , data: 0xfc },
-																{ label: "-1" 	   , data: 0xf8 },
+																{ label: "-1" 	  , data: 0xf8 },
 																{ label: "-1 1/3" , data: 0xf5 },
 																{ label: "-1 1/2" , data: 0xf4 },
 																{ label: "-1 2/3" , data: 0xf3 },
-																{ label: "-2" 	   , data: 0xf0 },
+																{ label: "-2" 	  , data: 0xf0 },
 																{ label: "-2 1/3" , data: 0xed },
 																{ label: "-2 1/2" , data: 0xec },
 																{ label: "-2 2/3" , data: 0xeb },
-																{ label: "-3" 	   , data: 0xe8 },
+																{ label: "-3" 	  , data: 0xe8 },
 																{ label: "unknown", data: 0xffffffff }
 															];
 		
@@ -116,7 +116,7 @@ package com.monday8am.ane
 																{ label: "unknown", data: 0xffffffff }];
 			
 		
-		public static const AeMode					: Array = [ { label: "Bulb", data: 0x0c },
+		public static const Tv						: Array = [ { label: "Bulb", data: 0x0c },
 																{ label: "30h" , data: 0x10 },
 																{ label: "25h" , data: 0x13 },
 																{ label: "20h" , data: 0x14 },
@@ -194,25 +194,25 @@ package com.monday8am.ane
 															];
 		
 		
-		public static const Tv						: Array = [ { label: "P"			  , data: 0 },
+		public static const AeMode					: Array = [ { label: "P"			  , data: 0 },
 																{ label: "Tv"			  , data: 1 },
 																{ label: "Av"			  , data: 2 },
 																{ label: "M"			  , data: 3 },
-																{ label: "Bulb"		  , data: 4 },
+																{ label: "Bulb"		  	  , data: 4 },
 																{ label: "A-DEP"		  , data: 5 },
 																{ label: "DEP"			  , data: 6 },
 																{ label: "C1"			  , data: 7 },
 																{ label: "C2"			  , data: 16 },
 																{ label: "C3"			  , data: 17 },
-																{ label: "Lock"          , data: 8 },
+																{ label: "Lock"           , data: 8 },
 																{ label: "GreenMode"	  , data: 9 },
-																{ label: "Night Portrait", data: 10 },
+																{ label: "Night Portrait" , data: 10 },
 																{ label: "Sports"		  , data: 11 },
 																{ label: "LandScape"	  , data: 13 },
-																{ label: "Close Up"	  , data: 14 },
+																{ label: "Close Up"	      , data: 14 },
 																{ label: "No Strobo"	  , data: 15 },
-																{ label: "Portrait"	  , data: 12 },
-																{ label: "Creative Auto" , data: 19 },
+																{ label: "Portrait"	      , data: 12 },
+																{ label: "Creative Auto"  , data: 19 },
 																{ label: "unknown"		  , data: 0xffffffff }
 															];		
 	}

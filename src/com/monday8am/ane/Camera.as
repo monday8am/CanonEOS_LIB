@@ -50,6 +50,19 @@ package com.monday8am.ane
 		
 		/**
 		 * 
+		 *  Camera Setting Properties
+		 * 
+		 **/
+		
+		public function getAv()   				 : uint { return uint( _extension.call( "getCameraProperty", EDSDKTypes.kEdsPropID_Av )); }
+		public function getIso()			  	 : uint { return uint( _extension.call( "getCameraProperty", EDSDKTypes.kEdsPropID_ISOSpeed  )); }
+		public function getTv()					 : uint { return uint( _extension.call( "getCameraProperty", EDSDKTypes.kEdsPropID_Tv )); }
+		public function getAeMode()				 : uint { return uint( _extension.call( "getCameraProperty", EDSDKTypes.kEdsPropID_AEMode )); }
+		public function getExposureComposition() : uint { return uint( _extension.call( "getCameraProperty", EDSDKTypes.kEdsPropID_ExposureCompensation )); }
+		
+
+		/**
+		 * 
 		 *  Shoot methods
 		 * 
 		 **/
@@ -59,7 +72,7 @@ package com.monday8am.ane
 		public function pressingCompletely()		: Boolean { return _extension.call( "executeCommand", "pressingCompletely" ); }
 		public function pressingOff()				: Boolean { return _extension.call( "executeCommand", "pressingOff" ); }
 
-
+		
 		/**
 		 * 
 		 *  EVF methods
@@ -80,8 +93,8 @@ package com.monday8am.ane
 		public function endEVF()						   : Boolean { return _extension.call( "executeCommand", "endEVF" );  }
 		public function evfAFOn()						   : Boolean { return _extension.call( "executeCommand", "evfAFOn" );  }
 		public function evfAFOff()						   : Boolean { return _extension.call( "executeCommand", "evfAFOff" );  }
-		public function getEvfWidth()  				 : uint 	{ return int( _extension.call( "getCameraProperty", EDSDKTypes.kEdsPropID_Evf_Width ) ); } 
-		public function getEvfHeight() 				 : uint     { return int( _extension.call( "getCameraProperty", EDSDKTypes.kEdsPropID_Evf_Height ) ); }
+		public function getEvfWidth()  				 : uint 	{ return uint( _extension.call( "getCameraProperty", EDSDKTypes.kEdsPropID_Evf_Width ) ); } 
+		public function getEvfHeight() 				 : uint     { return uint( _extension.call( "getCameraProperty", EDSDKTypes.kEdsPropID_Evf_Height ) ); }
 		
 		
 		/**
