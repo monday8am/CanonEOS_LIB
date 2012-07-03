@@ -2,7 +2,6 @@
 <flexLibProperties includeAllClasses="true" useMultiPlatformConfig="false" version="3">
   <includeClasses>
     <classEntry path="com.monday8am.ane.EDSDKTypes"/>
-    <classEntry path="com.monday8am.ane.Utils"/>
     <classEntry path="com.monday8am.ane.EDSDKValues"/>
   </includeClasses>
   <includeResources/>

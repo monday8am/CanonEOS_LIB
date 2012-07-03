@@ -1,12 +1,7 @@
 package com.monday8am.ane
 {
-	import flash.events.ErrorEvent;
-	import flash.events.Event;
 	import flash.events.EventDispatcher;
-	import flash.events.IEventDispatcher;
-	import flash.events.StatusEvent;
 	import flash.external.ExtensionContext;
-	import flash.text.ReturnKeyLabel;
 	
 	public class CanonEOSLib extends EventDispatcher
 	{
@@ -14,7 +9,6 @@ package com.monday8am.ane
 		private var _ExtensionContext : ExtensionContext;
 		private var _camera : Camera; 
 		private var _extensionContextReady : Boolean = true;
-		public  var lastError : Error;
 		
 		
 		public function CanonEOSLib()
@@ -25,7 +19,7 @@ package com.monday8am.ane
 			}
 			catch( e : Error ) 
 			{
-				lastError = e;
+
 			}	
 		}
 		

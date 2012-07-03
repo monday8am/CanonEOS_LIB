@@ -52,20 +52,20 @@ package com.monday8am.ane
 		 * 
 		 **/
 		
-		public function getAv()   				 : uint { return uint( _extension.call( "getCameraProperty", EDSDKTypes.kEdsPropID_Av )); }
-		public function getIso()			  	 : uint { return uint( _extension.call( "getCameraProperty", EDSDKTypes.kEdsPropID_ISOSpeed  )); }
-		public function getTv()					 : uint { return uint( _extension.call( "getCameraProperty", EDSDKTypes.kEdsPropID_Tv )); }
-		public function getAeMode()				 : uint { return uint( _extension.call( "getCameraProperty", EDSDKTypes.kEdsPropID_AEMode )); }
-		public function getImageQuality()		 : uint { return uint( _extension.call( "getCameraProperty", EDSDKTypes.kEdsPropID_ImageQuality )); }
-		public function getMeteringMode()		 : uint { return uint( _extension.call( "getCameraProperty", EDSDKTypes.kEdsPropID_MeteringMode )); }
+		public function getAv() : uint { return uint( _extension.call( "getCameraProperty", EDSDKTypes.kEdsPropID_Av )); }
+		public function getIso() : uint { return uint( _extension.call( "getCameraProperty", EDSDKTypes.kEdsPropID_ISOSpeed  )); }
+		public function getTv() : uint { return uint( _extension.call( "getCameraProperty", EDSDKTypes.kEdsPropID_Tv )); }
+		public function getAeMode() : uint { return uint( _extension.call( "getCameraProperty", EDSDKTypes.kEdsPropID_AEMode )); }
+		public function getImageQuality() : uint { return uint( _extension.call( "getCameraProperty", EDSDKTypes.kEdsPropID_ImageQuality )); }
+		public function getMeteringMode() : uint { return uint( _extension.call( "getCameraProperty", EDSDKTypes.kEdsPropID_MeteringMode )); }
 		public function getExposureComposition() : uint { return uint( _extension.call( "getCameraProperty", EDSDKTypes.kEdsPropID_ExposureCompensation )); }
 		
-		public function setAv( newValue : uint)	 				  : Boolean { return _extension.call( "setCameraProperty", EDSDKTypes.kEdsPropID_Av, newValue  );  }
-		public function setTv( newValue : uint)					  : Boolean { return _extension.call( "setCameraProperty", EDSDKTypes.kEdsPropID_Tv , newValue  );  }
-		public function setIso( newValue : uint)				  : Boolean { return _extension.call( "setCameraProperty", EDSDKTypes.kEdsPropID_ISOSpeed, newValue  );  }
-		public function setAeMode( newValue : uint)				  : Boolean { return _extension.call( "setCameraProperty", EDSDKTypes.kEdsPropID_AEMode, newValue  );  }
-		public function setImageQuality( newValue : uint)		  : Boolean { return _extension.call( "setCameraProperty", EDSDKTypes.kEdsPropID_ImageQuality, newValue  );  }
-		public function setMeteringMode( newValue : uint)		  : Boolean { return _extension.call( "setCameraProperty", EDSDKTypes.kEdsPropID_MeteringMode, newValue  );  }
+		public function setAv( newValue : uint) : Boolean { return _extension.call( "setCameraProperty", EDSDKTypes.kEdsPropID_Av, newValue  );  }
+		public function setTv( newValue : uint)	: Boolean { return _extension.call( "setCameraProperty", EDSDKTypes.kEdsPropID_Tv , newValue  );  }
+		public function setIso( newValue : uint) : Boolean { return _extension.call( "setCameraProperty", EDSDKTypes.kEdsPropID_ISOSpeed, newValue  );  }
+		public function setAeMode( newValue : uint)	: Boolean { return _extension.call( "setCameraProperty", EDSDKTypes.kEdsPropID_AEMode, newValue  );  }
+		public function setImageQuality( newValue : uint) : Boolean { return _extension.call( "setCameraProperty", EDSDKTypes.kEdsPropID_ImageQuality, newValue  );  }
+		public function setMeteringMode( newValue : uint) : Boolean { return _extension.call( "setCameraProperty", EDSDKTypes.kEdsPropID_MeteringMode, newValue  );  }
 		public function setExposureCompensation( newValue : uint) : Boolean { return _extension.call( "setCameraProperty", EDSDKTypes.kEdsPropID_ExposureCompensation, newValue  );  }
 		
 		public function getCameraProperty( propId : uint ) : uint 
@@ -91,9 +91,9 @@ package com.monday8am.ane
 		 **/
 		
 		public function takePicture( path : String ): Boolean { return _extension.call( "executeCommand", "TakePicture", path ) }
-		public function pressingHalfway()			: Boolean { return _extension.call( "executeCommand", "pressingHalfway" ); }
-		public function pressingCompletely()		: Boolean { return _extension.call( "executeCommand", "pressingCompletely" ); }
-		public function pressingOff()				: Boolean { return _extension.call( "executeCommand", "pressingOff" ); }
+		public function pressingHalfway() : Boolean { return _extension.call( "executeCommand", "pressingHalfway" ); }
+		public function pressingCompletely(): Boolean { return _extension.call( "executeCommand", "pressingCompletely" ); }
+		public function pressingOff(): Boolean { return _extension.call( "executeCommand", "pressingOff" ); }
 		
 		
 		/**
@@ -113,11 +113,11 @@ package com.monday8am.ane
 		}
 		
 		public function getEVF( _bitmapData : BitmapData ) : Boolean { return _extension.call( "getEVF", _bitmapData ); }	
-		public function endEVF()						   : Boolean { return _extension.call( "executeCommand", "endEVF" );  }
-		public function evfAFOn()						   : Boolean { return _extension.call( "executeCommand", "evfAFOn" );  }
-		public function evfAFOff()						   : Boolean { return _extension.call( "executeCommand", "evfAFOff" );  }
-		public function getEvfWidth()  				 	   : uint { return uint( _extension.call( "getCameraProperty", EDSDKTypes.kEdsPropID_Evf_Width ) ); } 
-		public function getEvfHeight() 				 	   : uint { return uint( _extension.call( "getCameraProperty", EDSDKTypes.kEdsPropID_Evf_Height ) ); }
+		public function endEVF() : Boolean { return _extension.call( "executeCommand", "endEVF" );  }
+		public function evfAFOn() : Boolean { return _extension.call( "executeCommand", "evfAFOn" );  }
+		public function evfAFOff() : Boolean { return _extension.call( "executeCommand", "evfAFOff" );  }
+		public function getEvfWidth() : uint { return uint( _extension.call( "getCameraProperty", EDSDKTypes.kEdsPropID_Evf_Width ) ); } 
+		public function getEvfHeight() : uint { return uint( _extension.call( "getCameraProperty", EDSDKTypes.kEdsPropID_Evf_Height ) ); }
 		
 		
 		/**
