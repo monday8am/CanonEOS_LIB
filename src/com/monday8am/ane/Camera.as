@@ -15,6 +15,7 @@ package com.monday8am.ane
 	
 	public class Camera extends EventDispatcher
 	{
+		
 		public static const PropertyDescChanged : String = "PropertyDescChanged";
 		public static const PropertyChanged	    : String = "PropertyChanged";
 		public static const EvfDataChanged 		: String = "EvfDataChanged";
@@ -35,19 +36,10 @@ package com.monday8am.ane
 		}
 		
 
-		/**
-		 * 
-		 *  Getter and setters
-		 * 
-		 */  
-
-		public function get modelName() : String { return ""; }
-	
-		
 		
 		/**
 		 * 
-		 * Extension methods
+		 * Init methods
 		 * 
 		 **/  
 		
@@ -58,7 +50,7 @@ package com.monday8am.ane
 		
 		/**
 		 * 
-		 *  Camera Setting Properties
+		 *  Camera Setting methods
 		 * 
 		 **/
 		
@@ -66,12 +58,16 @@ package com.monday8am.ane
 		public function getIso()			  	 : uint { return uint( _extension.call( "getCameraProperty", EDSDKTypes.kEdsPropID_ISOSpeed  )); }
 		public function getTv()					 : uint { return uint( _extension.call( "getCameraProperty", EDSDKTypes.kEdsPropID_Tv )); }
 		public function getAeMode()				 : uint { return uint( _extension.call( "getCameraProperty", EDSDKTypes.kEdsPropID_AEMode )); }
+		public function getImageQuality()		 : uint { return uint( _extension.call( "getCameraProperty", EDSDKTypes.kEdsPropID_ImageQuality )); }
+		public function getMeteringMode()		 : uint { return uint( _extension.call( "getCameraProperty", EDSDKTypes.kEdsPropID_MeteringMode )); }
 		public function getExposureComposition() : uint { return uint( _extension.call( "getCameraProperty", EDSDKTypes.kEdsPropID_ExposureCompensation )); }
 		
 		public function setAv( newValue : uint)	 				  : Boolean { return _extension.call( "setCameraProperty", EDSDKTypes.kEdsPropID_Av, newValue  );  }
 		public function setTv( newValue : uint)					  : Boolean { return _extension.call( "setCameraProperty", EDSDKTypes.kEdsPropID_Tv , newValue  );  }
 		public function setIso( newValue : uint)				  : Boolean { return _extension.call( "setCameraProperty", EDSDKTypes.kEdsPropID_ISOSpeed, newValue  );  }
 		public function setAeMode( newValue : uint)				  : Boolean { return _extension.call( "setCameraProperty", EDSDKTypes.kEdsPropID_AEMode, newValue  );  }
+		public function setImageQuality( newValue : uint)		  : Boolean { return _extension.call( "setCameraProperty", EDSDKTypes.kEdsPropID_ImageQuality, newValue  );  }
+		public function setMeteringMode( newValue : uint)		  : Boolean { return _extension.call( "setCameraProperty", EDSDKTypes.kEdsPropID_MeteringMode, newValue  );  }
 		public function setExposureCompensation( newValue : uint) : Boolean { return _extension.call( "setCameraProperty", EDSDKTypes.kEdsPropID_ExposureCompensation, newValue  );  }
 		
 		public function getCameraProperty( propId : uint ) : uint 

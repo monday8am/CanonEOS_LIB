@@ -16,7 +16,7 @@ package com.monday8am.ane
 		/*-----------------------------------------------------------------------------
 		Basic Types
 		-----------------------------------------------------------------------------*/
-	
+		
 		public static const FALSE                   : int = 0;
 		public static const TRUE                    : int = 1;
 		
@@ -128,9 +128,9 @@ package com.monday8am.ane
 		public static const kEdsPropID_RedEye                 : uint = 0x00000413;
 		public static const kEdsPropID_FlashMode              : uint = 0x00000414;
 		public static const kEdsPropID_LensStatus             : uint = 0x00000416;
-		public static const kEdsPropID_Artist	               : uint = 0x00000418;
-		public static const kEdsPropID_Copyright	           : uint = 0x00000419;
-		public static const kEdsPropID_DepthOfField	       : uint = 0x0000041b;
+		public static const kEdsPropID_Artist	              : uint = 0x00000418;
+		public static const kEdsPropID_Copyright	          : uint = 0x00000419;
+		public static const kEdsPropID_DepthOfField	       	  : uint = 0x0000041b;
 		public static const kEdsPropID_EFCompensation         : uint = 0x0000041e;
 		
 		/*----------------------------------
@@ -141,8 +141,8 @@ package com.monday8am.ane
 		public static const kEdsPropID_Evf_WhiteBalance        : uint = 0x00000502;
 		public static const kEdsPropID_Evf_ColorTemperature    : uint = 0x00000503;
 		public static const kEdsPropID_Evf_DepthOfFieldPreview : uint = 0x00000504;
-		public static const kEdsPropID_Evf_Width			    : uint = 0x00000506;
-		public static const kEdsPropID_Evf_Height			    : uint = 0x00000507;
+		public static const kEdsPropID_Evf_Width			   : uint = 0x00000506;
+		public static const kEdsPropID_Evf_Height			   : uint = 0x00000507;
 		
 		// EVF IMAGE DATA Properties
 		public static const kEdsPropID_Evf_Zoom                : uint = 0x00000507;
@@ -159,21 +159,21 @@ package com.monday8am.ane
 		/*-----------------------------------------------------------------------------
 		Camera Commands
 		-----------------------------------------------------------------------------*/
-	
+		
 		/*----------------------------------
 		Send Commands
 		----------------------------------*/
 		public static const kEdsCameraCommand_TakePicture                     : uint = 0x00000000;
 		public static const kEdsCameraCommand_ExtendShutDownTimer             : uint = 0x00000001;
-		public static const kEdsCameraCommand_BulbStart					   : uint = 0x00000002;
-		public static const kEdsCameraCommand_BulbEnd						   : uint = 0x00000003;
+		public static const kEdsCameraCommand_BulbStart					  	  : uint = 0x00000002;
+		public static const kEdsCameraCommand_BulbEnd						  : uint = 0x00000003;
 		public static const kEdsCameraCommand_DoEvfAf                         : uint = 0x00000102;
 		public static const kEdsCameraCommand_DriveLensEvf                    : uint = 0x00000103;
 		public static const kEdsCameraCommand_DoClickWBEvf                    : uint = 0x00000104;
 		
 		public static const kEdsCameraCommand_PressShutterButton			   : uint = 0x00000004;
 		
-	
+		
 		/*----------------------------------
 		Camera Status Commands
 		----------------------------------*/
@@ -359,6 +359,111 @@ package com.monday8am.ane
 		
 		public static const kEdsStateEvent_BulbExposureTime             : uint = 0x00000310;	
 		
-	}
 		
+		
+		/*-----------------------------------------------------------------------------
+		Image Quality
+		-----------------------------------------------------------------------------*/
+		
+		/* Jpeg Only */
+		public static const EdsImageQuality_LJ		: uint = 	0x0010ff0f;	/* Jpeg Large */
+		public static const EdsImageQuality_M1J		: uint = 	0x0510ff0f;	/* Jpeg Middle1 */
+		public static const EdsImageQuality_M2J		: uint = 	0x0610ff0f;	/* Jpeg Middle2 */
+		public static const EdsImageQuality_SJ		: uint = 	0x0210ff0f;	/* Jpeg Small */
+		public static const EdsImageQuality_LJF		: uint = 	0x0013ff0f;	/* Jpeg Large Fine */
+		public static const EdsImageQuality_LJN		: uint = 	0x0012ff0f;	/* Jpeg Large Normal */
+		public static const EdsImageQuality_MJF		: uint = 	0x0113ff0f;	/* Jpeg Middle Fine */
+		public static const EdsImageQuality_MJN		: uint = 	0x0112ff0f;	/* Jpeg Middle Normal */
+		public static const EdsImageQuality_SJF		: uint = 	0x0213ff0f;	/* Jpeg Small Fine */
+		public static const EdsImageQuality_SJN		: uint = 	0x0212ff0f;	/* Jpeg Small Normal */
+		public static const EdsImageQuality_S1JF	: uint = 	0x0E13ff0f;	/* Jpeg Small1 Fine */
+		public static const EdsImageQuality_S1JN	: uint = 	0x0E12ff0f;	/* Jpeg Small1 Normal */
+		public static const EdsImageQuality_S2JF	: uint = 	0x0F13ff0f;	/* Jpeg Small2 */
+		public static const EdsImageQuality_S3JF	: uint = 	0x1013ff0f;	/* Jpeg Small3 */
+		
+		/* RAW + Jpeg */
+		public static const EdsImageQuality_LR		: uint = 	0x0064ff0f;	/* RAW */
+		public static const EdsImageQuality_LRLJF	: uint = 	0x00640013;	/* RAW + Jpeg Large Fine */
+		public static const EdsImageQuality_LRLJN	: uint = 	0x00640012;	/* RAW + Jpeg Large Normal */
+		public static const EdsImageQuality_LRMJF	: uint = 	0x00640113;	/* RAW + Jpeg Middle Fine */
+		public static const EdsImageQuality_LRMJN	: uint = 	0x00640112;	/* RAW + Jpeg Middle Normal */
+		public static const EdsImageQuality_LRSJF	: uint = 	0x00640213;	/* RAW + Jpeg Small Fine */
+		public static const EdsImageQuality_LRSJN	: uint = 	0x00640212;	/* RAW + Jpeg Small Normal */
+		public static const EdsImageQuality_LRS1JF	: uint = 	0x00640E13;	/* RAW + Jpeg Small1 Fine */
+		public static const EdsImageQuality_LRS1JN	: uint = 	0x00640E12;	/* RAW + Jpeg Small1 Normal */
+		public static const EdsImageQuality_LRS2JF	: uint = 	0x00640F13;	/* RAW + Jpeg Small2 */
+		public static const EdsImageQuality_LRS3JF	: uint = 	0x00641013;	/* RAW + Jpeg Small3 */
+		
+		public static const EdsImageQuality_LRLJ	: uint = 	0x00640010;	/* RAW + Jpeg Large */
+		public static const EdsImageQuality_LRM1J	: uint = 	0x00640510;	/* RAW + Jpeg Middle1 */
+		public static const EdsImageQuality_LRM2J	: uint = 	0x00640610;	/* RAW + Jpeg Middle2 */
+		public static const EdsImageQuality_LRSJ	: uint = 	0x00640210;	/* RAW + Jpeg Small */
+		
+		/* MRAW(SRAW1) + Jpeg */
+		public static const EdsImageQuality_MR		: uint = 	0x0164ff0f;	/* MRAW(SRAW1) */
+		public static const EdsImageQuality_MRLJF	: uint = 	0x01640013;	/* MRAW(SRAW1) + Jpeg Large Fine */
+		public static const EdsImageQuality_MRLJN	: uint = 	0x01640012;	/* MRAW(SRAW1) + Jpeg Large Normal */
+		public static const EdsImageQuality_MRMJF	: uint = 	0x01640113;	/* MRAW(SRAW1) + Jpeg Middle Fine */
+		public static const EdsImageQuality_MRMJN	: uint = 	0x01640112;	/* MRAW(SRAW1) + Jpeg Middle Normal */
+		public static const EdsImageQuality_MRSJF	: uint = 	0x01640213;	/* MRAW(SRAW1) + Jpeg Small Fine */
+		public static const EdsImageQuality_MRSJN	: uint = 	0x01640212;	/* MRAW(SRAW1) + Jpeg Small Normal */
+		public static const EdsImageQuality_MRS1JF	: uint = 	0x01640E13;	/* MRAW(SRAW1) + Jpeg Small1 Fine */
+		public static const EdsImageQuality_MRS1JN	: uint = 	0x01640E12;	/* MRAW(SRAW1) + Jpeg Small1 Normal */
+		public static const EdsImageQuality_MRS2JF	: uint = 	0x01640F13;	/* MRAW(SRAW1) + Jpeg Small2 */
+		public static const EdsImageQuality_MRS3JF	: uint = 	0x01641013;	/* MRAW(SRAW1) + Jpeg Small3 */
+		
+		public static const EdsImageQuality_MRLJ	: uint = 	0x01640010;	/* MRAW(SRAW1) + Jpeg Large */
+		public static const EdsImageQuality_MRM1J	: uint = 	0x01640510;	/* MRAW(SRAW1) + Jpeg Middle1 */
+		public static const EdsImageQuality_MRM2J	: uint = 	0x01640610;	/* MRAW(SRAW1) + Jpeg Middle2 */
+		public static const EdsImageQuality_MRSJ	: uint = 	0x01640210;	/* MRAW(SRAW1) + Jpeg Small */
+		
+		/* SRAW(SRAW2) + Jpeg */
+		public static const EdsImageQuality_SR		: uint = 	0x0264ff0f;	/* SRAW(SRAW2) */
+		public static const EdsImageQuality_SRLJF	: uint = 	0x02640013;	/* SRAW(SRAW2) + Jpeg Large Fine */
+		public static const EdsImageQuality_SRLJN	: uint = 	0x02640012;	/* SRAW(SRAW2) + Jpeg Large Normal */
+		public static const EdsImageQuality_SRMJF	: uint = 	0x02640113;	/* SRAW(SRAW2) + Jpeg Middle Fine */
+		public static const EdsImageQuality_SRMJN	: uint = 	0x02640112;	/* SRAW(SRAW2) + Jpeg Middle Normal */
+		public static const EdsImageQuality_SRSJF	: uint = 	0x02640213;	/* SRAW(SRAW2) + Jpeg Small Fine */
+		public static const EdsImageQuality_SRSJN	: uint = 	0x02640212;	/* SRAW(SRAW2) + Jpeg Small Normal */
+		public static const EdsImageQuality_SRS1JF	: uint = 	0x02640E13;	/* SRAW(SRAW2) + Jpeg Small1 Fine */
+		public static const EdsImageQuality_SRS1JN	: uint = 	0x02640E12;	/* SRAW(SRAW2) + Jpeg Small1 Normal */
+		public static const EdsImageQuality_SRS2JF	: uint = 	0x02640F13;	/* SRAW(SRAW2) + Jpeg Small2 */
+		public static const EdsImageQuality_SRS3JF	: uint = 	0x02641013;	/* SRAW(SRAW2) + Jpeg Small3 */
+		
+		public static const EdsImageQuality_SRLJ	: uint = 	0x02640010;	/* SRAW(SRAW2) + Jpeg Large */
+		public static const EdsImageQuality_SRM1J	: uint = 	0x02640510;	/* SRAW(SRAW2) + Jpeg Middle1 */
+		public static const EdsImageQuality_SRM2J	: uint = 	0x02640610;	/* SRAW(SRAW2) + Jpeg Middle2 */
+		public static const EdsImageQuality_SRSJ	: uint = 	0x02640210;	/* SRAW(SRAW2) + Jpeg Small */
+		
+		public static const EdsImageQuality_Unknown : uint =  0xffffffff;
+		
+		public static const kEdsImageQualityForLegacy_LJ		: uint = 	0x001f000f;	/* Jpeg Large */
+		public static const kEdsImageQualityForLegacy_M1J		: uint = 	0x051f000f;	/* Jpeg Middle1 */
+		public static const kEdsImageQualityForLegacy_M2J		: uint = 	0x061f000f;	/* Jpeg Middle2 */
+		public static const kEdsImageQualityForLegacy_SJ		: uint = 	0x021f000f;	/* Jpeg Small */
+		public static const kEdsImageQualityForLegacy_LJF		: uint = 	0x00130000;	/* Jpeg Large Fine */
+		public static const kEdsImageQualityForLegacy_LJN		: uint = 	0x00120000;	/* Jpeg Large Normal */
+		public static const kEdsImageQualityForLegacy_MJF		: uint = 	0x01130000;	/* Jpeg Middle Fine */
+		public static const kEdsImageQualityForLegacy_MJN		: uint = 	0x01120000;	/* Jpeg Middle Normal */
+		public static const kEdsImageQualityForLegacy_SJF		: uint = 	0x02130000;	/* Jpeg Small Fine */
+		public static const kEdsImageQualityForLegacy_SJN		: uint = 	0x02120000;	/* Jpeg Small Normal */
+		
+		public static const kEdsImageQualityForLegacy_LR		: uint = 	0x00240000;	/* RAW */
+		public static const kEdsImageQualityForLegacy_LRLJF		: uint = 	0x00240013;	/* RAW + Jpeg Large Fine */
+		public static const kEdsImageQualityForLegacy_LRLJN		: uint = 	0x00240012;	/* RAW + Jpeg Large Normal */
+		public static const kEdsImageQualityForLegacy_LRMJF		: uint = 	0x00240113;	/* RAW + Jpeg Middle Fine */
+		public static const kEdsImageQualityForLegacy_LRMJN		: uint = 	0x00240112;	/* RAW + Jpeg Middle Normal */
+		public static const kEdsImageQualityForLegacy_LRSJF		: uint = 	0x00240213;	/* RAW + Jpeg Small Fine */
+		public static const kEdsImageQualityForLegacy_LRSJN		: uint = 	0x00240212;	/* RAW + Jpeg Small Normal */
+		
+		public static const kEdsImageQualityForLegacy_LR2		: uint = 	0x002f000f;	/* RAW */
+		public static const kEdsImageQualityForLegacy_LR2LJ		: uint = 	0x002f001f;	/* RAW + Jpeg Large */
+		public static const kEdsImageQualityForLegacy_LR2M1J	: uint = 	0x002f051f;	/* RAW + Jpeg Middle1 */
+		public static const kEdsImageQualityForLegacy_LR2M2J	: uint = 	0x002f061f;	/* RAW + Jpeg Middle2 */
+		public static const kEdsImageQualityForLegacy_LR2SJ		: uint = 	0x002f021f;	/* RAW + Jpeg Small */
+		
+		public static const kEdsImageQualityForLegacy_Unknown : uint =  0xffffffff;		
+		
+	}
+	
 }
