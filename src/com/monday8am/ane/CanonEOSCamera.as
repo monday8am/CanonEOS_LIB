@@ -11,7 +11,7 @@ package com.monday8am.ane
 	
 	
 	
-	public class Camera extends EventDispatcher
+	public class CanonEOSCamera extends EventDispatcher
 	{
 		
 		public static const PropertyDescChanged : String = "PropertyDescChanged";
@@ -25,7 +25,7 @@ package com.monday8am.ane
 		private var _extension : ExtensionContext;
 		
 		
-		public function Camera( extension : ExtensionContext )
+		public function CanonEOSCamera( extension : ExtensionContext )
 		{
 			_extension = extension;
 			_extension.addEventListener(  StatusEvent.STATUS, onStatus );

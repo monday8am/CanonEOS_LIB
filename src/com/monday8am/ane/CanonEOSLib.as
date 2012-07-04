@@ -7,7 +7,7 @@ package com.monday8am.ane
 	{
 		
 		private var _ExtensionContext : ExtensionContext;
-		private var _camera : Camera; 
+		private var _camera : CanonEOSCamera; 
 		private var _extensionContextReady : Boolean = true;
 		
 		
@@ -39,11 +39,11 @@ package com.monday8am.ane
 		}
 
 		
-		public function getCamera():Camera
+		public function getCamera():CanonEOSCamera
 		{
 			if( _camera == null )
 			{
-				_camera = new Camera( _ExtensionContext );
+				_camera = new CanonEOSCamera( _ExtensionContext );
 			}
 			
 			return _camera;
